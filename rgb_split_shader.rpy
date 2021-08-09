@@ -19,8 +19,8 @@
             vec2 pos_g = v_tex_coord.xy;
             vec2 pos_b = v_tex_coord.xy;
             
-            float r = u_intensity * .01 / 2;
-            float fi = u_angle * PI / 180;
+            float r = u_intensity * .01 / 2.0;
+            float fi = u_angle * PI / 180.0;
             
             pos_r += vec2(r * cos(fi), r * sin(fi));
             pos_b -= vec2(r * cos(fi), r * sin(fi));
