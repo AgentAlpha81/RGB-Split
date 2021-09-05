@@ -25,11 +25,12 @@
             pos_r += vec2(r * cos(fi), r * sin(fi));
             pos_b -= vec2(r * cos(fi), r * sin(fi));
             
-            vec3 res;
+            vec4 res;
             res.r = texture2D(tex0, pos_r).r;
             res.g = texture2D(tex0, pos_g).g;
             res.b = texture2D(tex0, pos_b).b;
-            
-            gl_FragColor = vec4(res, 1.0);
+            res.a = (texture2D(tex0, pos_r).a+texture2D(tex0, pos_g).a+texture2D(tex0, pos_b).a)/3.0;
+
+            gl_FragColor = res;
         """
     )
