@@ -44,7 +44,7 @@ python early hide:
 
 init -1000:
 
-    transform tr_rgb_split(time=30, intensity=1.0):
+    transform tr_rgb_split(time=30.0, intensity=1.0):
         animation
         shader 'rgb_split'
         u_intensity intensity
