@@ -49,6 +49,6 @@ init -1000:
         shader 'rgb_split'
         u_intensity intensity
         block:
-            linear time u_angle 360
-            u_angle 0
+            linear time u_angle 360.0
+            u_angle 0.0
             repeat
