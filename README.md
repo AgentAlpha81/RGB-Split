@@ -1,23 +1,23 @@
 # RGB-Split
 ![screenshot0001](https://user-images.githubusercontent.com/23055740/128658333-8ad6c0a4-50ed-49fe-a05c-af4c43ccce4a.png)
 
-Кастомный шейдер для Ren'Py с эффектом RGB Split, похожим на хроматическую аберрацию или анаглифные изображения.
-Шейдер "разбивает" картинку на отдельные цветовые каналы и как-бы разносит их друг относительно друга. 
+Custom Ren'Py RGB Split shader that has the same effect as chromatic aberration or anaglyph images.
+It shifts the red and blue channels each one in different directions and rotates them around the green channel.
 
-Демонстрация эффекта - https://vk.com/video-201215195_456239021
+Video: https://vk.com/video-201215195_456239021
 
-# Использование:
-Минимальная версия движка Ren'Py - 7.4.0
+# Instruction:
+Minimum Ren'Py version - 7.4.0
 
-* Добавьте файл rgb_split_shader.rpy в свой проект
-* Укажите config.gl2 = True в рабочих файлах вашего проекта, чтобы включить поддержку шейдеров.
-* Создайте трансформ с шейдером "rgb_split" и задайте нужные значения для переменных u_intensity и u_angle
-* Примените трансформ к изображению, для которого требуется эффект. 
+* Drop rgb_split_shader.rpy inside your project.
+* Add "config.gl2 = True" line to enable shaders in your game.
+* Create transform with "rgb_split" shader and set values to u_intensity and u_angle.
+* Apply created transform to your image.
 
-Примеры трансформов с шейдером RGB Split:
+# Usage Example:
 
 ![2021-08-09_085415](https://user-images.githubusercontent.com/23055740/128658974-97f348dd-5560-4b49-89eb-70e6a7d6a519.png)
 
-Переменная u_intensity отвечает за то, насколько цветовые каналы будут удалены друг от друга. Рекомендуемые значения: 0.001-1.0
+u_intensity - lenght between channels (recommended 0.001-1.0).
 
-Переменная u_angle - собственно угол поворота. 
+u_angle - rotation degrees. 
