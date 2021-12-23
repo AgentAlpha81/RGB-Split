@@ -2,13 +2,13 @@ python early hide:
 
     ############################################################################
     ## RGB Split
-    
+
     """
     'rgb_split'     - shader name.
     'u_intensity'   - channels separation length.
     'u_angle'       - angle degrees.
     """
-    
+
     renpy.register_shader(
         "rgb_split",
         variables="""
@@ -41,3 +41,14 @@ python early hide:
             gl_FragColor = res;
         """
     )
+
+init -1000:
+
+    transform tr_rgb_split(time=30, intensity=1.0):
+        animation
+        shader 'rgb_split'
+        u_intensity intensity
+        block:
+            linear time u_angle 360
+            u_angle 0
+            repeat
