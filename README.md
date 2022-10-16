@@ -18,6 +18,6 @@ Minimum Ren'Py version - 7.4.0
 
 ![2021-08-09_085415](https://user-images.githubusercontent.com/23055740/128658974-97f348dd-5560-4b49-89eb-70e6a7d6a519.png)
 
-u_intensity - lenght between channels (recommended 0.001-1.0).
+u_intensity - distance between channels, in pixels
 
 u_angle - rotation degrees. 
