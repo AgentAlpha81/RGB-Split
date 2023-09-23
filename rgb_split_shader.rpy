@@ -14,6 +14,7 @@ python early hide:
         variables="""
             uniform float u_intensity;
             uniform float u_angle;
+            uniform vec2 u_model_size;
             uniform sampler2D tex0;
             attribute vec2 a_tex_coord;
             varying vec2 v_tex_coord;
